@@ -1,4 +1,6 @@
-import styles from "../styles/Layout.module.css";
+import Navbar from './Navbar';
+import styles from '../styles/Layout.module.css';
+import Header from './Header';
 
 type Props = {
   children: JSX.Element;
@@ -6,9 +8,15 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>{children}</main>
-    </div>
+    <>
+      <Navbar />
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <Header />
+          {children}
+        </main>
+      </div>
+    </>
   );
 };
 

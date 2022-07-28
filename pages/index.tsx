@@ -1,7 +1,13 @@
-import type { NextPage } from "next";
-import Head from "next/head";
+import type { GetStaticProps, NextPage } from 'next';
+import Head from 'next/head';
+import ArticleList from '../components/ArticleList';
+import { Article } from '../types';
 
-const Home: NextPage = () => {
+type Props = {
+  articles: Article[];
+};
+
+const Home: NextPage<Props> = ({ articles }) => {
   return (
     <div>
       <Head>
@@ -9,9 +15,23 @@ const Home: NextPage = () => {
         <meta name="description" content="Store website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Welcome to next</h1>
+
+      <ArticleList articles={articles} />
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async context => {
+  const res = await fetch(
+    'https://jsonplaceholder.typicode.com/posts?_limit=6'
+  );
+  const articles: Article[] = await res.json();
+
+  return {
+    props: {
+      articles,
+    },
+  };
 };
 
 export default Home;
