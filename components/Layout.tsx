@@ -11,7 +11,12 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Meta />
-      <Navbar />
+      <Navbar
+        links={[
+          { link: '/', label: 'Home' },
+          { link: '/about', label: 'About' },
+        ]}
+      />
       <div className={styles.container}>
         <main className={styles.main}>
           <Header />
