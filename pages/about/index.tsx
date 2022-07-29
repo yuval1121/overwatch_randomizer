@@ -5,7 +5,7 @@ const About: NextPage = () => {
   return (
     <div>
       <Meta title="about" />
-      <h1>hello</h1>
+      <a href="https://github.com/yuval1121">My github</a>
     </div>
   );
 };

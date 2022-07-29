@@ -7,9 +7,9 @@ type Props = {
 };
 
 const Meta = ({
-  title = 'Store Project',
-  keywords = 'Store made with nextjs',
-  description = 'A store',
+  title = 'Overwatch Randomizer',
+  keywords = 'Overwatch Random',
+  description = 'Randomly picks a hero for you to play',
 }: Props) => {
   return (
     <Head>
