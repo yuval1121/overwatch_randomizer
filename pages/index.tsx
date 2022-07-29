@@ -1,6 +1,8 @@
 import type { GetStaticProps, NextPage } from 'next';
+import path from 'path';
 import HeroPicker from '../components/HeroPicker';
 import { Hero } from '../types';
+import { promises as fs } from 'fs';
 
 type Props = {
   heroes: Hero[];
@@ -15,12 +17,13 @@ const Home: NextPage<Props> = ({ heroes }) => {
 };
 
 export const getStaticProps: GetStaticProps = async context => {
-  const url = process.env.VERCEL_URL;
-  const res = await fetch(`${url}/api/staticdata`);
-  const heroes = await res.json();
+  const jsonDirectory = path.join(process.cwd(), 'data');
+
+  const fileContents = await fs.readFile(jsonDirectory + '/heroes.json');
+  const data = JSON.parse(fileContents.toString());
 
   return {
-    props: { heroes },
+    props: { heroes: data },
   };
 };
 
