@@ -15,9 +15,10 @@ const Home: NextPage<Props> = ({ heroes }) => {
 };
 
 export const getStaticProps: GetStaticProps = async context => {
-  const res = await fetch('http://localhost:3000/api/staticdata');
+  const url = process.env.VERCEL_URL;
+  const res = await fetch(`${url}/api/staticdata`);
   const heroes = await res.json();
-  
+
   return {
     props: { heroes },
   };
