@@ -7,7 +7,7 @@
   {
     "name": "Doomfist",
     "id": 2,
-    "role": "dps"
+    "role": "tank"
   },
   {
     "name": "Junker Queen",
@@ -78,5 +78,90 @@
     "name": "Zenyatta",
     "id": 16,
     "role": "support"
+  },
+  {
+    "name": "Ashe",
+    "id": 17,
+    "role": "dps"
+  },
+  {
+    "name": "Bastion",
+    "id": 18,
+    "role": "dps"
+  },
+  {
+    "name": "Mcree",
+    "id": 19,
+    "role": "dps"
+  },
+  {
+    "name": "Echo",
+    "id": 20,
+    "role": "dps"
+  },
+  {
+    "name": "Genji",
+    "id": 21,
+    "role": "dps"
+  },
+  {
+    "name": "Hanzo",
+    "id": 22,
+    "role": "dps"
+  },
+  {
+    "name": "Junkrat",
+    "id": 23,
+    "role": "dps"
+  },
+  {
+    "name": "Mei",
+    "id": 24,
+    "role": "dps"
+  },
+  {
+    "name": "Pharah",
+    "id": 25,
+    "role": "dps"
+  },
+  {
+    "name": "Reaper",
+    "id": 26,
+    "role": "dps"
+  },
+  {
+    "name": "Soldier: 76",
+    "id": 27,
+    "role": "dps"
+  },
+  {
+    "name": "Sojourn",
+    "id": 28,
+    "role": "dps"
+  },
+  {
+    "name": "Sombra",
+    "id": 29,
+    "role": "dps"
+  },
+  {
+    "name": "Symmetra",
+    "id": 30,
+    "role": "dps"
+  },
+  {
+    "name": "Torbjorn",
+    "id": 31,
+    "role": "dps"
+  },
+  {
+    "name": "Tracer",
+    "id": 32,
+    "role": "dps"
+  },
+  {
+    "name": "Widowmaker",
+    "id": 33,
+    "role": "dps"
   }
 ]
