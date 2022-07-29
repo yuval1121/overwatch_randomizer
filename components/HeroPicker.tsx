@@ -32,7 +32,7 @@ const HeroPicker = ({ heroes }: Props) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       <Button onClick={handleClick}>Hero Randomizer</Button>
-      {isShown && <HeroCard title="test1" image="none" hero={hero} />}
+      {isShown && <HeroCard hero={hero} />}
     </div>
   );
 };
