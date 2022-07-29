@@ -1,10 +1,9 @@
-import { ActionIcon } from '@mantine/core';
+import { ActionIcon, useMantineColorScheme } from '@mantine/core';
 import { IconSun, IconMoonStars } from '@tabler/icons';
-import useUIStore from '../store/store';
 import dynamic from 'next/dynamic';
 
 const ThemeIcon = () => {
-  const { colorScheme, toggleColorScheme } = useUIStore();
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
 
   return (

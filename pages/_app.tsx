@@ -1,25 +1,39 @@
 import Layout from '../components/Layout';
 import type { AppProps } from 'next/app';
-import useUIStore from '../store/store';
-import { MantineProvider } from '@mantine/core';
+import {
+  ColorScheme,
+  ColorSchemeProvider,
+  MantineProvider,
+} from '@mantine/core';
 import { rtlCache } from '../rtl-cache';
+import { useLocalStorage } from '@mantine/hooks';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const bears = useUIStore(state => state.colorScheme);
+  const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
+    key: 'mantine-color-scheme',
+    defaultValue: 'light',
+    getInitialValueInEffect: true,
+  });
+
+  const toggleColorScheme = (value?: ColorScheme) =>
+    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
 
   return (
-    <MantineProvider
-      withGlobalStyles
-      withNormalizeCSS
-      emotionCache={rtlCache}
-      theme={{
-        colorScheme: bears,
-      }}
+    <ColorSchemeProvider
+      colorScheme={colorScheme}
+      toggleColorScheme={toggleColorScheme}
     >
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </MantineProvider>
+      <MantineProvider
+        withGlobalStyles
+        withNormalizeCSS
+        theme={{ colorScheme }}
+        emotionCache={rtlCache}
+      >
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </MantineProvider>
+    </ColorSchemeProvider>
   );
 }
 
