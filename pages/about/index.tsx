@@ -1,3 +1,4 @@
+import { Anchor } from '@mantine/core';
 import { NextPage } from 'next';
 import Meta from '../../components/Meta';
 
@@ -5,7 +6,7 @@ const About: NextPage = () => {
   return (
     <div>
       <Meta title="about" />
-      <a href="https://github.com/yuval1121">My github</a>
+      <Anchor href="https://github.com/yuval1121">My Github</Anchor>
     </div>
   );
 };

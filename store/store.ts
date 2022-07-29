@@ -10,7 +10,7 @@ interface UIState {
 const useUIStore = create<UIState>()(
   devtools(
     persist(
-      (set, get) => ({
+      set => ({
         colorScheme: 'light',
         toggleColorScheme: value =>
           set(state => ({
