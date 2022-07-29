@@ -7,7 +7,7 @@ const Header = () => {
         <span>Overwatch</span> Randomizer
       </h1>
       <p className={headerStyles.description}>
-        Automatically picks a random character for you
+        Automatically picks a random hero for you
       </p>
     </div>
   );
