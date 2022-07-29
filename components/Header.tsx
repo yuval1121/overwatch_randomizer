@@ -4,9 +4,11 @@ const Header = () => {
   return (
     <div>
       <h1 className={headerStyles.title}>
-        <span>WebDev</span> News
+        <span>Overwatch</span> Randomizer
       </h1>
-      <p className={headerStyles.description}>Keep up to date</p>
+      <p className={headerStyles.description}>
+        Automatically picks a random character for you
+      </p>
     </div>
   );
 };

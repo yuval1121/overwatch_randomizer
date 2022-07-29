@@ -1,0 +1,82 @@
+[
+  {
+    "name": "D.Va",
+    "id": 1,
+    "role": "tank"
+  },
+  {
+    "name": "Doomfist",
+    "id": 2,
+    "role": "dps"
+  },
+  {
+    "name": "Junker Queen",
+    "id": 3,
+    "role": "tank"
+  },
+  {
+    "name": "Orisa",
+    "id": 4,
+    "role": "tank"
+  },
+  {
+    "name": "Reinhardt",
+    "id": 5,
+    "role": "tank"
+  },
+  {
+    "name": "Roadhog",
+    "id": 6,
+    "role": "Sigma"
+  },
+  {
+    "name": "Winstion",
+    "id": 7,
+    "role": "tank"
+  },
+  {
+    "name": "Wrecking ball",
+    "id": 8,
+    "role": "tank"
+  },
+  {
+    "name": "Zarya",
+    "id": 9,
+    "role": "tank"
+  },
+  {
+    "name": "Ana",
+    "id": 10,
+    "role": "support"
+  },
+  {
+    "name": "Baptiste",
+    "id": 11,
+    "role": "support"
+  },
+  {
+    "name": "Brigitte",
+    "id": 12,
+    "role": "support"
+  },
+  {
+    "name": "Lucio",
+    "id": 13,
+    "role": "support"
+  },
+  {
+    "name": "Mercy",
+    "id": 14,
+    "role": "support"
+  },
+  {
+    "name": "Moira",
+    "id": 15,
+    "role": "support"
+  },
+  {
+    "name": "Zenyatta",
+    "id": 16,
+    "role": "support"
+  }
+]

@@ -4,3 +4,9 @@ export interface Article {
   title: string;
   body: string;
 }
+
+export interface Hero {
+  id: number;
+  name: string;
+  type: string;
+}

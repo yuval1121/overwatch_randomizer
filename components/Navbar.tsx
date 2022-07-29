@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from '../styles/Navbar.module.css';
+import ThemeIcon from './ThemeIcon';
 
 const Navbar = () => {
   return (
@@ -12,6 +13,7 @@ const Navbar = () => {
           <Link href="/about">About</Link>
         </li>
       </ul>
+      <ThemeIcon />
     </nav>
   );
 };

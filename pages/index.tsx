@@ -1,29 +1,25 @@
 import type { GetStaticProps, NextPage } from 'next';
-import ArticleList from '../components/ArticleList';
-import { Article } from '../types';
+import HeroPicker from '../components/HeroPicker';
+import { Hero } from '../types';
 
 type Props = {
-  articles: Article[];
+  heroes: Hero[];
 };
 
-const Home: NextPage<Props> = ({ articles }) => {
+const Home: NextPage<Props> = ({ heroes }) => {
   return (
     <div>
-      <ArticleList articles={articles} />
+      <HeroPicker heroes={heroes} />
     </div>
   );
 };
 
 export const getStaticProps: GetStaticProps = async context => {
-  const res = await fetch(
-    'https://jsonplaceholder.typicode.com/posts?_limit=6'
-  );
-  const articles: Article[] = await res.json();
-
+  const res = await fetch('http://localhost:3000/api/staticdata');
+  const heroes = await res.json();
+  
   return {
-    props: {
-      articles,
-    },
+    props: { heroes },
   };
 };
 
