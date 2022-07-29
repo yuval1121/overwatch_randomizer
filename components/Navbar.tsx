@@ -7,7 +7,6 @@ import {
   Burger,
   Paper,
   Transition,
-  Button,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Link from 'next/link';
