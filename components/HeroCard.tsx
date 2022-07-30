@@ -5,11 +5,7 @@ type Props = {
 };
 
 const HeroCard = ({ hero }: Props) => {
-  return (
-    <div>
-      <span>{hero.name}</span>
-    </div>
-  );
+  return <span>{hero.name}</span>;
 };
 
 export default HeroCard;

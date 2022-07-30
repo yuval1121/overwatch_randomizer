@@ -1,7 +1,7 @@
 import { Button } from '@mantine/core';
 import { useState } from 'react';
 import { Hero } from '../types';
-import HeroCard from './Hero';
+import HeroCard from './HeroCard';
 
 type Props = {
   heroes: Hero[];
@@ -30,7 +30,7 @@ const HeroPicker = ({ heroes }: Props) => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', rowGap: '1rem' }}>
       <Button onClick={handleClick}>Hero Randomizer</Button>
       {isShown && <HeroCard hero={hero} />}
     </div>
