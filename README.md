@@ -31,6 +31,8 @@
 - Statically generated.
 - Randomly picks a hero for you to play.
 - Huskyjs integration.
+- Mantine UI.
+- Dark theme support.
 - Deployed to <a href='https://overwatch-randomizer.vercel.app/'>vercel</a>.
 
 ## How To Use
