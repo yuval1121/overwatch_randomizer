@@ -2,6 +2,7 @@ import { Button } from '@mantine/core';
 import { useState } from 'react';
 import { Hero } from '../types';
 import HeroCard from './HeroCard';
+import sample from 'lodash.sample';
 
 type Props = {
   heroes: Hero[];
@@ -15,18 +16,9 @@ const HeroPicker = ({ heroes }: Props) => {
     if (isShown === false) {
       setIsShown(prev => !prev);
     }
+    const hero = sample(heroes);
 
-    const min = Math.ceil(1);
-    const max = Math.floor(heroes.length);
-    const rand = Math.floor(Math.random() * (max - min) + min);
-
-    const hero = heroes.find(e => e.id === rand);
-
-    if (hero) {
-      setHero(hero);
-    } else {
-      setHero(heroes[0]);
-    }
+    if (hero) setHero(hero);
   };
 
   return (
