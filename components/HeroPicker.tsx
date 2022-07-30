@@ -27,6 +27,7 @@ const HeroPicker = ({ heroes }: Props) => {
     } else {
       setHero(heroes[0]);
     }
+    //tesr
   };
 
   return (
