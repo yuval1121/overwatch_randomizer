@@ -31,6 +31,8 @@
 - Statically generated.
 - Randomly picks a hero for you to play.
 - Huskyjs integration.
+- Mantine UI.
+- Dark theme support.
 - Deployed to <a href='https://overwatch-randomizer.vercel.app/'>vercel</a>.
 
 ## How To Use
@@ -46,10 +48,6 @@ $ cd overwatch_randomizer
 
 # Install dependencies
 $ npm install
-
-# Create .env and define postgres connection
-$ cat > .env
-$ DATABASE_URL="{connection}"
 
 # Run the app
 $ npm run dev
