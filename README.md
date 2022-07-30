@@ -49,10 +49,6 @@ $ cd overwatch_randomizer
 # Install dependencies
 $ npm install
 
-# Create .env and define postgres connection
-$ cat > .env
-$ DATABASE_URL="{connection}"
-
 # Run the app
 $ npm run dev
 ```
