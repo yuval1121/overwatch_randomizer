@@ -8,5 +8,5 @@ export interface Article {
 export interface Hero {
   id: number;
   name: string;
-  type: string;
+  role: string;
 }
