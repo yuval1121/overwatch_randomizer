@@ -18,5 +18,5 @@ const ThemeIcon = () => {
   );
 };
 
-// export default ThemeIcon;
-export default dynamic(() => Promise.resolve(ThemeIcon), { ssr: false });
+export default ThemeIcon;
+// export default dynamic(() => Promise.resolve(ThemeIcon), { ssr: true });
