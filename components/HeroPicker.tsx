@@ -11,7 +11,7 @@ type Props = {
 
 const HeroPicker = ({ heroes }: Props) => {
   const [isShown, setIsShown] = useState(false);
-  const [hero, setHero] = useState<Hero>(heroes[0]);
+  const [hero, setHero] = useState<Hero | null>(null);
   const [heroPool, setHeroPool] = useState<Hero[]>(heroes);
 
   const handleClick = () => {
