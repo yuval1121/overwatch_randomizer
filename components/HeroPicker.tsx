@@ -24,9 +24,17 @@ const HeroPicker = ({ heroes }: Props) => {
 
   return (
     <>
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <Button onClick={handleClick}>Hero Randomizer</Button>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        <Button aria-label="Click here to randomize" onClick={handleClick}>
+          Hero Randomizer
+        </Button>
       </div>
+
       <RolePicker
         heroes={heroes}
         heroPool={heroPool}

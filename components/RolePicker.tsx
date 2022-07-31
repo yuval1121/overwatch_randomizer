@@ -47,6 +47,7 @@ const RolePicker = ({ heroes, heroPool, setHeroPool }: Props) => {
         justifyContent: 'space-between',
         flexWrap: 'wrap',
         marginTop: '1rem',
+        columnGap: '0.5rem',
       }}
     >
       <Checkbox checked={isTank} onChange={tankClickHandler} label="Tank" />

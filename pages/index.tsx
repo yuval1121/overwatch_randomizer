@@ -10,9 +10,9 @@ type Props = {
 
 const Home: NextPage<Props> = ({ heroes }) => {
   return (
-    <div>
+    <>
       <HeroPicker heroes={heroes} />
-    </div>
+    </>
   );
 };
 

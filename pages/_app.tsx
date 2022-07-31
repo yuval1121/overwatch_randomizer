@@ -5,7 +5,6 @@ import {
   ColorSchemeProvider,
   MantineProvider,
 } from '@mantine/core';
-import { rtlCache } from '../rtl-cache';
 import { useLocalStorage } from '@mantine/hooks';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -27,7 +26,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         withGlobalStyles
         withNormalizeCSS
         theme={{ colorScheme }}
-        emotionCache={rtlCache}
       >
         <Layout>
           <Component {...pageProps} />
