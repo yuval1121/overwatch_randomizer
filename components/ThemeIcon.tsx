@@ -1,6 +1,6 @@
 import { ActionIcon, useMantineColorScheme } from '@mantine/core';
 import { IconSun, IconMoonStars } from '@tabler/icons';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 
 const ThemeIcon = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();

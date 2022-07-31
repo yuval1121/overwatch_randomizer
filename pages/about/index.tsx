@@ -5,7 +5,7 @@ import Meta from '../../components/Meta';
 const About: NextPage = () => {
   return (
     <div>
-      <Meta title="about" />
+      <Meta title="About" />
       <Anchor href="https://github.com/yuval1121">My Github</Anchor>
     </div>
   );

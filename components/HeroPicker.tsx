@@ -34,7 +34,6 @@ const HeroPicker = ({ heroes }: Props) => {
           Hero Randomizer
         </Button>
       </div>
-
       <RolePicker
         heroes={heroes}
         heroPool={heroPool}
