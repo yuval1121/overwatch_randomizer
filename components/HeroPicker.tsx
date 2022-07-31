@@ -1,5 +1,5 @@
-import { Button, Checkbox } from '@mantine/core';
-import { ChangeEvent, useState } from 'react';
+import { Button } from '@mantine/core';
+import { useState } from 'react';
 import { Hero } from '../types';
 import HeroCard from './HeroCard';
 import sample from 'lodash.sample';
