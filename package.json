@@ -9,6 +9,7 @@
     "lint": "next lint",
     "serve": "serve -s out -p 8000",
     "prepare": "husky install",
+    "format": "prettier -w .",
     "pre-commit": "next lint"
   },
   "dependencies": {
