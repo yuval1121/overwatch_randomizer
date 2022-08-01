@@ -10,7 +10,7 @@
     "serve": "serve -s out -p 8000",
     "prepare": "husky install",
     "format": "prettier -w .",
-    "pre-commit": "next lint"
+    "pre-commit": "next lint && npm run format"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
