@@ -94,12 +94,10 @@ const useStyles = createStyles(theme => ({
 }));
 
 type Props = {
-      links: { link: string; label: string }[];
+  links: { link: string; label: string }[];
 };
 
 const Navbar = ({ links }: Props) => {
-
-  const t =    32;
   const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
