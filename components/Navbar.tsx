@@ -11,6 +11,7 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import Link from 'next/link';
 import ThemeIcon from './ThemeIcon';
+import { useRouter } from 'next/router';
 
 const HEADER_HEIGHT = 60;
 
@@ -98,8 +99,9 @@ type Props = {
 };
 
 const Navbar = ({ links }: Props) => {
+  const router = useRouter();
   const [opened, { toggle, close }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
+  const [active, setActive] = useState(router.pathname);
   const { classes, cx } = useStyles();
 
   const items = links.map(link => (
