@@ -16,7 +16,7 @@ const Home: NextPage<Props> = ({ heroes }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async context => {
+export const getStaticProps: GetStaticProps = async () => {
   const jsonDirectory = path.join(process.cwd(), 'data');
 
   const fileContents = await fs.readFile(jsonDirectory + '/heroes.json');
