@@ -129,6 +129,7 @@ const Navbar = ({ links }: Props) => {
         </Group>
 
         <Burger
+          aria-label="Menu"
           opened={opened}
           onClick={toggle}
           className={classes.burger}
