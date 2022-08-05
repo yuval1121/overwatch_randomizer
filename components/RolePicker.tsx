@@ -1,6 +1,16 @@
-import { Checkbox } from '@mantine/core';
+import { Checkbox, createStyles } from '@mantine/core';
 import { ChangeEvent, Dispatch, SetStateAction, useState } from 'react';
 import { Hero } from '../types';
+
+const useStyles = createStyles(() => ({
+  rolepicker: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    marginTop: '1rem',
+    columnGap: '0.5rem',
+  },
+}));
 
 type Props = {
   heroes: Hero[];
@@ -9,6 +19,7 @@ type Props = {
 };
 
 const RolePicker = ({ heroes, heroPool, setHeroPool }: Props) => {
+  const { classes } = useStyles();
   const [isTank, setIsTank] = useState(true);
   const [isDps, setIsDps] = useState(true);
   const [isSupport, setIsSupport] = useState(true);
@@ -41,15 +52,7 @@ const RolePicker = ({ heroes, heroPool, setHeroPool }: Props) => {
   };
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        flexWrap: 'wrap',
-        marginTop: '1rem',
-        columnGap: '0.5rem',
-      }}
-    >
+    <div className={classes.rolepicker}>
       <Checkbox checked={isTank} onChange={tankClickHandler} label="Tank" />
       <Checkbox checked={isDps} onChange={dpsClickHandler} label="DPS" />
       <Checkbox
