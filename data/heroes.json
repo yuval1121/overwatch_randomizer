@@ -163,5 +163,10 @@
     "name": "Widowmaker",
     "id": 33,
     "role": "dps"
+  },
+  {
+    "name": "Kiriko",
+    "id": 34,
+    "role": "support"
   }
 ]
