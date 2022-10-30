@@ -24,40 +24,47 @@ const RolePicker = ({ heroes, heroPool, setHeroPool }: Props) => {
   const [isDps, setIsDps] = useState(true);
   const [isSupport, setIsSupport] = useState(true);
 
-  const tankClickHandler = (e: ChangeEvent<HTMLInputElement>) => {
+  const onClickHandler = (
+    e: ChangeEvent<HTMLInputElement>,
+    role: 'dps' | 'support' | 'tank'
+  ) => {
     if (e.currentTarget.checked) {
-      setHeroPool(heroPool.concat(heroes.filter(e => e.role === 'tank')));
+      setHeroPool(heroPool.concat(heroes.filter(e => e.role === role)));
     } else {
-      setHeroPool(heroPool.filter(e => e.role !== 'tank'));
+      setHeroPool(heroPool.filter(e => e.role !== role));
     }
-    setIsTank(e.currentTarget.checked);
-  };
 
-  const dpsClickHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.currentTarget.checked) {
-      setHeroPool(heroPool.concat(heroes.filter(e => e.role === 'dps')));
-    } else {
-      setHeroPool(heroPool.filter(e => e.role !== 'dps'));
+    switch (role) {
+      case 'dps': {
+        setIsDps(e.currentTarget.checked);
+        break;
+      }
+      case 'support': {
+        setIsSupport(e.currentTarget.checked);
+        break;
+      }
+      case 'tank': {
+        setIsTank(e.currentTarget.checked);
+        break;
+      }
     }
-    setIsDps(e.currentTarget.checked);
-  };
-
-  const supportClickHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.currentTarget.checked) {
-      setHeroPool(heroPool.concat(heroes.filter(e => e.role === 'support')));
-    } else {
-      setHeroPool(heroPool.filter(e => e.role !== 'support'));
-    }
-    setIsSupport(e.currentTarget.checked);
   };
 
   return (
     <div className={classes.rolepicker}>
-      <Checkbox checked={isTank} onChange={tankClickHandler} label="Tank" />
-      <Checkbox checked={isDps} onChange={dpsClickHandler} label="DPS" />
+      <Checkbox
+        checked={isTank}
+        onChange={e => onClickHandler(e, 'tank')}
+        label="Tank"
+      />
+      <Checkbox
+        checked={isDps}
+        onChange={e => onClickHandler(e, 'dps')}
+        label="DPS"
+      />
       <Checkbox
         checked={isSupport}
-        onChange={supportClickHandler}
+        onChange={e => onClickHandler(e, 'support')}
         label="Support"
       />
     </div>
