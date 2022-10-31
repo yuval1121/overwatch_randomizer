@@ -24,7 +24,7 @@ const RolePicker = ({ heroes, heroPool, setHeroPool }: Props) => {
   const [isDps, setIsDps] = useState(true);
   const [isSupport, setIsSupport] = useState(true);
 
-  const onClickHandler = (
+  const handleClick = (
     e: ChangeEvent<HTMLInputElement>,
     role: 'dps' | 'support' | 'tank'
   ) => {
@@ -54,17 +54,17 @@ const RolePicker = ({ heroes, heroPool, setHeroPool }: Props) => {
     <div className={classes.rolepicker}>
       <Checkbox
         checked={isTank}
-        onChange={e => onClickHandler(e, 'tank')}
+        onChange={e => handleClick(e, 'tank')}
         label="Tank"
       />
       <Checkbox
         checked={isDps}
-        onChange={e => onClickHandler(e, 'dps')}
+        onChange={e => handleClick(e, 'dps')}
         label="DPS"
       />
       <Checkbox
         checked={isSupport}
-        onChange={e => onClickHandler(e, 'support')}
+        onChange={e => handleClick(e, 'support')}
         label="Support"
       />
     </div>
