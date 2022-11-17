@@ -14,11 +14,10 @@ const useStyles = createStyles(() => ({
 
 type Props = {
   heroes: Hero[];
-  heroPool: Hero[];
   setHeroPool: Dispatch<SetStateAction<Hero[]>>;
 };
 
-const RolePicker = ({ heroes, heroPool, setHeroPool }: Props) => {
+const RolePicker = ({ heroes, setHeroPool }: Props) => {
   const { classes } = useStyles();
   const [isTank, setIsTank] = useState(true);
   const [isDps, setIsDps] = useState(true);
@@ -28,23 +27,28 @@ const RolePicker = ({ heroes, heroPool, setHeroPool }: Props) => {
     e: ChangeEvent<HTMLInputElement>,
     role: 'dps' | 'support' | 'tank'
   ) => {
-    if (e.currentTarget.checked) {
-      setHeroPool(heroPool.concat(heroes.filter(e => e.role === role)));
+    const isChecked = e.currentTarget.checked;
+
+    if (isChecked) {
+      setHeroPool(prevHeroPool => [
+        ...prevHeroPool,
+        ...heroes.filter(e => e.role === role),
+      ]);
     } else {
-      setHeroPool(heroPool.filter(e => e.role !== role));
+      setHeroPool(prevHeroPool => prevHeroPool.filter(e => e.role !== role));
     }
 
     switch (role) {
       case 'dps': {
-        setIsDps(e.currentTarget.checked);
+        setIsDps(isChecked);
         break;
       }
       case 'support': {
-        setIsSupport(e.currentTarget.checked);
+        setIsSupport(isChecked);
         break;
       }
       case 'tank': {
-        setIsTank(e.currentTarget.checked);
+        setIsTank(isChecked);
         break;
       }
     }

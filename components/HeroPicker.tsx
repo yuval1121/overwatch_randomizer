@@ -27,11 +27,7 @@ const HeroPicker = ({ heroes }: Props) => {
       <Button aria-label="Click here to randomize" onClick={handleClick}>
         Hero Randomizer
       </Button>
-      <RolePicker
-        heroes={heroes}
-        heroPool={heroPool}
-        setHeroPool={setHeroPool}
-      />
+      <RolePicker heroes={heroes} setHeroPool={setHeroPool} />
       {isShown && <HeroCard hero={hero} />}
     </>
   );
